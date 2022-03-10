@@ -1,0 +1,51 @@
+.film-form__wrapper {
+	width: 100%;
+}
+
+.film-form {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.film-form__label {
+	margin-top: 20px;
+	font-size: 1.4rem;
+	color: rgb(160, 216, 203);
+}
+
+.film-form__text {
+	margin-bottom: 7px;
+	font-size: 1.1rem;
+	color: rgb(160, 216, 203);
+}
+
+.film-form__description {
+	height: 100px;
+}
+
+.film-form__file {
+	color: #D8BFD8;
+}
+
+.film-form_submit {
+	margin-top: 10px;
+	width: 200px;
+	text-decoration-color: #FFDAB9;
+    color: #FFDAB9;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+    font-size: 1.2rem;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.film-form_submit:hover {
+    color: #D8BFD8;
+    border-color: #6c757d;
+}
