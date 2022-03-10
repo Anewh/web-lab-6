@@ -1,0 +1,8 @@
+# настроить index.php
+# настроить routes.yaml
+# вынести в контроллеры (переименовать)
+# example:
+detail:
+    path: /items/{id}
+    controller: App\Controller\MainController::show
+    methods:    GET
