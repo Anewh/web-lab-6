@@ -1,8 +1,10 @@
 <?php
 
-require_once 'pdo.php'; 
+namespace App\Models;
 
-class Comment extends FilmsPdo
+use App\Models\Pdo;
+
+class Comment extends Pdo
 {
     public function getCommentsByFilmId($film_id, $last_id, $count)
     {
