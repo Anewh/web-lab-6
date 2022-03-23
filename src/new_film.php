@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+require_once "models/film.php";
+
+try {
+    $film_pdo = new Film();
+} catch (Exception $exception) {
+    echo "Ошибка при подключении к БД: " . $exception->getMessage();
+    die();
+}
+?>
+
 <!doctype html>
 <html>
 	<head>
@@ -59,6 +72,8 @@
 		<?php require_once 'fragments/footer.php'; ?>
 		
 	</div>
+
+
 	<p class="form__error" id="formError"></p>
 	</body>
 </html>

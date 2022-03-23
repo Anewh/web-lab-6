@@ -1,8 +1,5 @@
-.*
-php-cs-fixer.phar
-/.*
-/vendor
 /img/
 /config/pdo.ini
+/resources/
 /posters/
 

@@ -23,7 +23,7 @@
 	<body>
 	<div class="wrapper">
 
-		<?php require_once 'fragments\header.php'; ?>
+		<?php //require_once 'fragments\header.php'; ?>
 		
 
 		<div class="page-title">
@@ -40,7 +40,7 @@
 			</div>
 		</main>
 
-		<?php require_once 'fragments\footer.php'; ?>
+		<?php //require_once 'fragments\footer.php'; ?>
 
 	</div>
 	</body>

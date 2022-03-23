@@ -18,7 +18,7 @@ function makeQueryUrl() {
       last_id = last_card.getAttribute('data-id'); 
   }
 
-  return '/comments?filmid=' + film_id + '&lastid=' + last_id;
+  return '/comments.php?filmid=' + film_id + '&lastid=' + last_id;
 }
 
 function bindPreviews() {

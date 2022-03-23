@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Models;
+require_once 'pdo.php';
 
-use App\Models\Pdo;
-
-class User extends Pdo
+class User extends FilmsPdo
 {
     public function getUserById($user_id)
     {

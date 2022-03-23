@@ -22,7 +22,7 @@ new_film.addEventListener('submit', function (event) {
   new_film_data.append('poster', poster);
   new_film_data.append('trailer_url', new_film.trailer_url.value);
 
-  fetch('/film/create', {
+  fetch('save_film.php', {
        method: 'POST',
        body: new_film_data
     }
@@ -33,7 +33,7 @@ new_film.addEventListener('submit', function (event) {
       displayError(new_film_submit, result.errors);
 
     } else {
-      location.href = "/film/" + result.card_id;
+      location.href = "/details.php?cardid=" + result.card_id;
     }
   })
   .catch(error => console.log(error));

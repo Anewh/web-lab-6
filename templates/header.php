@@ -18,6 +18,6 @@
 		</div>
 	</div>
 	<?php if (!isset($_SESSION['user_name'])) {
-    require_once 'popup.php';
+    require_once 'fragments/popup.php';
 }?>
 </header>

@@ -73,7 +73,7 @@ function signInSubmit(){
     loginData.append('email', formIn.email.value);
     loginData.append('password', formIn.password.value);
 
-    fetch('/login', {
+    fetch('enter.php', {
          method: 'POST',
          body: loginData
       }
@@ -105,7 +105,7 @@ function signUpSubmit(){
     registerData.append('phone_number', formReg.phone.value);
     registerData.append('password', formReg.password.value);
   
-    fetch('/registration', {
+    fetch('registration.php', {
          method: 'POST',
          body: registerData
       }

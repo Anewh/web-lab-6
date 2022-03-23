@@ -10,7 +10,7 @@ function makeQueryUrl() {
       last_id = last_card.getAttribute('data-id'); 
   }
 
-  return '/films?lastid=' + last_id;
+  return '/previews.php?lastid=' + last_id;
 }
 
 function bindPreviews() {

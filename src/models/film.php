@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Models;
+require_once 'pdo.php';
 
-use App\Models\Pdo;
-
-class Film extends Pdo
+class Film extends FilmsPdo
 {
     public function getPreviews($last_id, $count)
     {
