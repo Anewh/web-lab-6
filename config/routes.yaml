@@ -1,8 +1,55 @@
-# настроить index.php
-# настроить routes.yaml
-# вынести в контроллеры (переименовать)
-# example:
-detail:
-    path: /items/{id}
-    controller: App\Controller\MainController::show
+#Auth
+
+registration:
+    path:       /registration
+    controller: App\Controller\AuthController::registration
+    methods:    POST
+
+auth:
+    path:       /login
+    controller: App\Controller\AuthController::auth
+    methods:    POST
+
+logout:
+    path:       /logout
+    controller: App\Controller\AuthController::logout
+    methods:    POST
+
+#Comments
+
+getComments:
+    path:       /comments
+    controller: App\Controller\CommentsController::getComments
+    methods:    GET
+
+createComment:
+    path:       /comment/create
+    controller: App\Controller\CommentsController::createComment
+    methods:    POST
+
+#Film
+
+main:
+    path:       /
+    controller: App\Controller\FilmController::getStartPage
+    methods:    GET
+
+showFilmForm:
+    path:       /film/create
+    controller: App\Controller\FilmController::getFilmForm
+    methods:    GET    
+
+createAndUpdateFilm:
+    path:       /film/create
+    controller: App\Controller\FilmController::createFilm
+    methods:    POST
+
+getDetails:
+    path:       /film/{id}
+    controller: App\Controller\FilmController::getDetailsInformation
+    methods:    GET
+
+getPreviews:
+    path:       /films
+    controller: App\Controller\FilmController::getPreviewList
     methods:    GET

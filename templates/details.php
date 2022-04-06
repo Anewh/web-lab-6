@@ -1,25 +1,3 @@
-<?php
-session_start();
-
-require_once "models/film.php";
-
-$id = intval(@$_GET['cardid']);
-
-if (!is_numeric($id)) {
-    header('Location: /index.php'); //Не ломай сайт :)
-    die();
-}
-
-try {
-    $film_pdo = new Film();
-} catch (Exception $exception) {
-    echo "DB connection error: " . $exception->getMessage();
-    die();
-}
-
-$card = $film_pdo->getFilmDetails($id)
-?>
-
 <!doctype html>
 <html>
 	<head>
@@ -48,11 +26,11 @@ $card = $film_pdo->getFilmDetails($id)
 		<div class="page-title">
 		</div>
 		<main class="main">
-			<?php if ($card->rowCount() === 0): ?> 
+			<?php if ($params['card']->rowCount() === 0): ?> 
 				<p class="not-found"> Нет подробной информации по этому фильму </p>
 
 			<?php else:
-                $card = $card->fetch(PDO::FETCH_ASSOC);?>
+                $card = $params['card']->fetch(PDO::FETCH_ASSOC);?>
 				<div id="filmDetails" class="details" data-id=<?= $id ?>>
 					<img src=<?= $card['poster_url'] ?> alt="тут должна быть картинка" class="details__img">
 

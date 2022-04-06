@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Validation;
+
 class FilmValidation
 {
     private $title;
